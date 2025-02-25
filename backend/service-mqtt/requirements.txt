@@ -1,0 +1,2 @@
+django
+paho-mqtt

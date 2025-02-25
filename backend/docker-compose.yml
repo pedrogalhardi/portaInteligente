@@ -1,0 +1,27 @@
+services:
+  emqx:
+    image: emqx/emqx:latest
+    container_name: emqx_broker
+    ports:
+      - "1883:1883"
+      - "8083:8083"
+      - "18083:18083"
+    restart: always
+    networks:
+      - mqtt_network
+
+  backend:
+    build: ./service-mqtt
+    container_name: backend_python
+    depends_on:
+      - emqx
+    environment:
+      - MQTT_BROKER=emqx
+    ports:
+      - "8000:8000"
+    networks:
+      - mqtt_network
+
+networks:
+  mqtt_network:
+    driver: bridge
