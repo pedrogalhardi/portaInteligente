@@ -1,0 +1,46 @@
+# Bytecode do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos de ambiente virtual
+venv/
+env/
+*.egg-info/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Configurações locais e credenciais
+.env
+*.local_settings.py
+
+# Arquivos de banco de dados
+db.sqlite3
+*.sqlite3
+
+# Migrações (opcional, se geradas automaticamente)
+**/migrations/**
+
+# Arquivos estáticos e mídia gerados
+staticfiles/
+media/
+
+# Logs e arquivos temporários
+*.log
+*.pot
+*.pyc
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Arquivos do Celery
+celerybeat-schedule
+
+# Arquivos do VSCode, JetBrains e outros editores
+.vscode/
+.idea/
+*.iml
+
+# Docker (se estiver usando)
+docker-compose.override.yml
